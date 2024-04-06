@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /energym-api
+  port: 8080
+
+spring:
+  # Dev is active by default. This value can be overwritten by java arg param
+  profiles:
+    active: dev
+  application:
+    name: backend
+  jackson:
+    time-zone: America/Bogota
+    date-format: yyyy-MM-dd HH:mm:ss

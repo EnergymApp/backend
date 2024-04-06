@@ -1,0 +1,35 @@
+
+spring:
+  security:
+    user:
+      name: usuario
+      password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      default_schema: public
+      ddl-auto: update
+    properties:
+      hibernate:
+        order_inserts: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 50
+          lob:
+            non_contextual_creation: true
+          temp:
+            use_jdbc_metadata_defaults: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres.hocrbsskisulyamgkwlq
+    password: ingenieriaweb1
+    hikari:
+      idle-timeout: 10000
+      maximum-pool-size: 5
+
+  logging:
+    level:
+      root: DEBUG
+      org.springframework: DEBUG
