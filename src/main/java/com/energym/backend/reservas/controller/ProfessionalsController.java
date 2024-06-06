@@ -50,7 +50,7 @@ public class ProfessionalsController {
         Optional<Professionals> found = service.findProfessionalById(id);
         if (found.isPresent()) {
             log.info("Profesional encontrado: Nombre - " + found.get().getName());
-            return new ResponseEntity<>(found.get(), HttpStatus.FOUND);
+            return new ResponseEntity<>(found.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
